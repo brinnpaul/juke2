@@ -4,18 +4,13 @@ juke.controller('AlbumsCtrl', function ($scope, $rootScope, $log, StatsFactory, 
 
   AlbumFactory.fetchAll()
   .then(function(albums) {
-    $scope.albums = albums
-
-    $scope.albumIds = albums.map(function(album) {
-      return album.id
-    })
-    console.log($scope.albumIds)
+    $scope.albums = albums ;
+    console.log($scope.albums);
   })
 
-  // $scope.albumIds = $scope.albums.map(function(album) {
-    // return album.id
-  // })
 
-  // console.log($scope.albumIds)
+
+
+
 
 })
